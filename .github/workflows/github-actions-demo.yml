@@ -25,6 +25,7 @@ jobs:
         sleep_time: ["10", "15"]
     steps:
       - run: sleep ${{ matrix.sleep_time }}
+      - run: exit 1
 
   After-All:
     needs: [ Depends-on-Job-Matrix, Depends-on-Job ]
